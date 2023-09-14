@@ -25,14 +25,28 @@
 }
 
 .table-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(29, 89, 89);
-  height: 400px;
+  width: 100%; /* Make the table span the full width of its container */
+  border-collapse: collapse; /* Collapse the borders between cells */
+  text-align: center; /* Center-align text in cells */
+  border: 2px;
+  border-color: red;
 }
 
+/* Style the table header (thead) */
 .head-wrap {
-  display: flex;
-  justify-content: space-evenly;
+  background-color: #333; /* Add a background color for the header row */
+}
+
+/* Style table cells (td and th) */
+.column {
+  padding: 10px; /* Add padding for cell content */
+  border: 1px solid #ccc; /* Add borders to the cells */
+  width: 33%; /* Distribute the width evenly among columns (3 columns) */
+}
+
+/* Center-align text in header cells (th) */
+.head-wrap th {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
