@@ -1,0 +1,38 @@
+* {
+  background-color: rgb(207, 207, 207);
+}
+
+.create-and-update-button {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  border: 2;
+  border-color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-button {
+  background-color: aqua;
+  padding: 10px;
+  margin: 10px;
+  border-color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(29, 89, 89);
+  height: 400px;
+}
+
+.head-wrap {
+  display: flex;
+  justify-content: space-evenly;
+}
