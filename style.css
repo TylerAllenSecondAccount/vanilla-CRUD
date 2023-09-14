@@ -42,6 +42,8 @@
   padding: 10px; /* Add padding for cell content */
   border: 1px solid #ccc; /* Add borders to the cells */
   width: 33%; /* Distribute the width evenly among columns (3 columns) */
+  border: 1px;
+  border-color: antiquewhite;
 }
 
 /* Center-align text in header cells (th) */
@@ -49,4 +51,8 @@
   text-align: center;
   padding: 10px;
   border: 1px solid #ccc;
+}
+
+.create_form {
+  display: none;
 }

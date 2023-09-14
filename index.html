@@ -7,22 +7,28 @@
     <link rel="stylesheet" href="style.css" />
     <title>CRUD</title>
   </head>
-  <body>
+  <body onload="readAll()">
     <div>
       <div class="container">
-        <form action="" class="'form-wrapper">
-          <input type="text" class="username" />
-          <input type="email" class="email" />
-          <button class="create-and-update-button">Create</button>
+        <form action="" class="'form-wrapper create_form">
+          <input type="text" class="name" placeholder="Enter Name" />
+          <input type="email" class="email" placeholder="Enter Email" />
+          <button onclick="add()" class="create-and-update-button">
+            Create
+          </button>
         </form>
 
-        <form action="">
-          <input type="text" class="'username" />
+        <!-- <form action="" class="update_form">
+          <input type="text" class="'name" />
           <input type="email" class="email" />
           <button class="create-and-update-button">Update</button>
-        </form>
+        </form> -->
 
-        <button class="add-button">ADD +</button>
+        <div class="add_div">
+          <button onclick="create()" class="create-and-update-button">
+            ADD +
+          </button>
+        </div>
 
         <table class="table-container">
           <tr class="head-wrap">
@@ -31,16 +37,11 @@
             <th>Action</th>
           </tr>
 
-          <tr class="data-table">
-            <!-- Names -->
-            <td class="column">Eggs</td>
-            <!-- Email -->
-            <td class="column">Eggs</td>
-            <!-- Action -->
-            <td class="column">#</td>
-          </tr>
+          <tbody class="data-table"></tbody>
         </table>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
