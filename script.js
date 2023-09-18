@@ -18,7 +18,7 @@ let readAll = () => {
             <td>${e.email}</td>
             <td>
                     <button onClick={edit(${e.id})}>Edit</button>
-                    <button>Delete</button>
+                    <button onClick={deleteUser(${e.id})}>Delete</button>
             </td>
         </tr>
 
@@ -29,9 +29,12 @@ let readAll = () => {
 };
 
 // delete
-const deleteUser = () => {
-  
-
+const deleteUser = (id) => {
+  data = data.filter((e) => {
+    return e.id !== id;
+  });
+  readAll();
+  console.log(data);
 };
 
 // edit
