@@ -28,9 +28,11 @@ let readAll = () => {
   tableData.innerHTML = ele;
 };
 
+// delete
+const deleteUser = () => {
+  
 
-// delete i
-
+};
 
 // edit
 
