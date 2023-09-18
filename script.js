@@ -17,7 +17,7 @@ let readAll = () => {
             <td>${e.name}</td>
             <td>${e.email}</td>
             <td>
-                    <button>Edit</button>
+                    <button onClick={edit(${e.id})}>Edit</button>
                     <button>Delete</button>
             </td>
         </tr>
@@ -25,14 +25,37 @@ let readAll = () => {
     `;
   });
 
-  console.log(ele);
-
   tableData.innerHTML = ele;
 };
 
-// create
 
-let create = () => {
+// delete i
+
+
+// edit
+
+const update = () => {
+  let id = parseInt(document.querySelector('.id').value);
+  let name = document.querySelector('.uname').value;
+  let email = document.querySelector('.uemail').value;
+  let index = data.findIndex((e) => e.id === id);
+  data[index] = { id, name, email };
+  document.querySelector('.edit_form').style.display = 'none';
+  readAll();
+};
+
+const edit = (id) => {
+  document.querySelector('.edit_form').style.display = 'block';
+
+  let obj = data.find((e) => e.id === id);
+
+  document.querySelector('.uname').value = obj.name;
+  document.querySelector('.uemail').value = obj.email;
+  document.querySelector('.id').value = obj.id;
+};
+
+// create
+const create = () => {
   document.querySelector('.create_form').style.display = 'block';
   document.querySelector('.add_div').style.display = 'none';
 };
@@ -44,10 +67,10 @@ function add() {
   let newObj = { id: 3, name: name, email: email };
   data.push(newObj);
 
-  document.querySelector('.create_form').style = 'block';
+  document.querySelector('.create_form').style.display = 'none';
   document.querySelector('.add_div').style.display = 'inline';
 
   readAll();
 }
 
-console.log(document.querySelector('.name').value);
+// edit

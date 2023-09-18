@@ -13,8 +13,26 @@
         <form action="" class="'form-wrapper create_form">
           <input type="text" class="name" placeholder="Enter Name" />
           <input type="email" class="email" placeholder="Enter Email" />
-          <button onclick="add()" class="create-and-update-button">
+          <button
+            type="button"
+            onclick="add()"
+            class="create-and-update-button"
+          >
             Create
+          </button>
+        </form>
+
+        <!-- edit form -->
+        <form action="" class="'form-wrapper edit_form">
+          <input type="text" hidden class="id" />
+          <input type="text" class="uname"  />
+          <input type="email" class="uemail"  />
+          <button
+            type="button"
+            onclick="update()"
+            class="create-and-update-button"
+          >
+            UPDATE
           </button>
         </form>
 
@@ -25,7 +43,11 @@
         </form> -->
 
         <div class="add_div">
-          <button onclick="create()" class="create-and-update-button">
+          <button
+            type="button"
+            onclick="create()"
+            class="create-and-update-button"
+          >
             ADD +
           </button>
         </div>
